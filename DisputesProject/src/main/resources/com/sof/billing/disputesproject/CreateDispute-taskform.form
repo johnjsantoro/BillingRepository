@@ -4,4 +4,20 @@
 <property name="name" value="CreateDispute-taskform.form"/>
 <property name="displayMode" value="default"/>
 <property name="status" value="0"/>
+<field position="0" name="amountId" type="InputTextFloat" id="133887438">
+<property name="fieldRequired" value="false"/>
+<property name="label" value="quot;enquot;,quot;amountIn (amountId)quot;"/>
+<property name="inputBinding" value="amountIn"/>
+<property name="outputBinding" value="amountOut"/>
+<property name="fieldClass" value="java.lang.Float"/>
+</field>
+<field position="1" name="nameId" type="InputText" id="1899191761">
+<property name="fieldRequired" value="false"/>
+<property name="label" value="quot;enquot;,quot;nameInput (nameId)quot;"/>
+<property name="inputBinding" value="nameInput"/>
+<property name="outputBinding" value="nameOutput"/>
+<property name="fieldClass" value="java.lang.String"/>
+</field>
+<dataHolder inputId="amountIn" name="#0000A0" type="basicType" outId="amountOut" value="java.lang.Float" id="amountId"/>
+<dataHolder inputId="nameInput" name="#0000A0" type="basicType" outId="nameOutput" value="java.lang.String" id="nameId"/>
 </form>
