@@ -1,0 +1,53 @@
+
+<form id="2105784128">
+<property name="subject" value=""/>
+<property name="name" value="DisputesProject.BillingDisputes-taskform.form"/>
+<property name="displayMode" value="default"/>
+<property name="status" value="0"/>
+<field position="0" name="disputeInfo_approvalRequired" type="CheckBox" id="400536962">
+<property name="fieldRequired" value="false"/>
+<property name="label" value="quot;enquot;,quot;approvalRequired (disputeInfo)quot;"/>
+<property name="inputBinding" value=""/>
+<property name="outputBinding" value="disputeInfo/approvalRequired"/>
+<property name="fieldClass" value="java.lang.Boolean"/>
+</field>
+<field position="1" name="disputeInfo_customerName" type="InputText" id="1496810081">
+<property name="fieldRequired" value="false"/>
+<property name="label" value="quot;enquot;,quot;customerName (disputeInfo)quot;"/>
+<property name="inputBinding" value=""/>
+<property name="outputBinding" value="disputeInfo/customerName"/>
+<property name="fieldClass" value="java.lang.String"/>
+</field>
+<field position="2" name="disputeInfo_disputeAmount" type="InputTextFloat" id="338503862">
+<property name="fieldRequired" value="false"/>
+<property name="label" value="quot;enquot;,quot;disputeAmount (disputeInfo)quot;"/>
+<property name="inputBinding" value=""/>
+<property name="outputBinding" value="disputeInfo/disputeAmount"/>
+<property name="fieldClass" value="java.lang.Float"/>
+</field>
+<field position="3" name="approvalRequired" type="CheckBox" id="360127300">
+<property name="fieldRequired" value="false"/>
+<property name="label" value="quot;enquot;,quot;approvalRequired (approvalRequired)quot;"/>
+<property name="inputBinding" value=""/>
+<property name="outputBinding" value="approvalRequired"/>
+<property name="fieldClass" value="java.lang.Boolean"/>
+</field>
+<field position="4" name="customerName" type="InputText" id="1299368261">
+<property name="fieldRequired" value="false"/>
+<property name="label" value="quot;enquot;,quot;customerName (customerName)quot;"/>
+<property name="inputBinding" value=""/>
+<property name="outputBinding" value="customerName"/>
+<property name="fieldClass" value="java.lang.String"/>
+</field>
+<field position="5" name="disputeAmount" type="InputTextFloat" id="2131121554">
+<property name="fieldRequired" value="false"/>
+<property name="label" value="quot;enquot;,quot;disputeAmount (disputeAmount)quot;"/>
+<property name="inputBinding" value=""/>
+<property name="outputBinding" value="disputeAmount"/>
+<property name="fieldClass" value="java.lang.Float"/>
+</field>
+<dataHolder name="#A7E690" type="basicType" outId="approvalRequired" value="java.lang.Boolean" id="approvalRequired"/>
+<dataHolder name="#0000A0" type="basicType" outId="customerName" value="java.lang.String" id="customerName"/>
+<dataHolder name="#FF54A7" type="basicType" outId="disputeAmount" value="java.lang.Float" id="disputeAmount"/>
+<dataHolder inputId="" name="#0000A0" type="dataModelerEntry" outId="disputeInfo" value="com.sof.billing.disputesproject.DisputeInfoObject" id="disputeInfo"/>
+</form>
