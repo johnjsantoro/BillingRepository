@@ -4,7 +4,7 @@ rule "IsApprovalRequired"
 	dialect "mvel"
 	when
 		DisputeInfoObject( )
-		( DisputeInfoObject( disputeAmount > 500 ) )
+		DisputeInfoObject( disputeAmount > 500 )
 	then
 		DisputeInfoObject fact0 = new DisputeInfoObject();
 		fact0.setApprovalRequired( true );
