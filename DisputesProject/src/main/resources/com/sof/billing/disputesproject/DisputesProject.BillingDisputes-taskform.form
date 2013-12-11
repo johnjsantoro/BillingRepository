@@ -1,0 +1,39 @@
+
+<form id="1464574759">
+<property name="subject" value=""/>
+<property name="name" value="DisputesProject.BillingDisputes-taskform.form"/>
+<property name="displayMode" value="default"/>
+<property name="status" value="0"/>
+<field position="0" name="approvalRequired" type="CheckBox" id="1489555215">
+<property name="fieldRequired" value="false"/>
+<property name="label" value="quot;enquot;,quot;approvalRequired (approvalRequired)quot;"/>
+<property name="inputBinding" value=""/>
+<property name="outputBinding" value="approvalRequired"/>
+<property name="fieldClass" value="java.lang.Boolean"/>
+</field>
+<field position="1" name="customerName" type="InputText" id="1770506589">
+<property name="fieldRequired" value="false"/>
+<property name="label" value="quot;enquot;,quot;customerName (customerName)quot;"/>
+<property name="inputBinding" value=""/>
+<property name="outputBinding" value="customerName"/>
+<property name="fieldClass" value="java.lang.String"/>
+</field>
+<field position="2" name="disputeAmount" type="InputTextFloat" id="48294077">
+<property name="fieldRequired" value="false"/>
+<property name="label" value="quot;enquot;,quot;disputeAmount (disputeAmount)quot;"/>
+<property name="inputBinding" value=""/>
+<property name="outputBinding" value="disputeAmount"/>
+<property name="fieldClass" value="java.lang.Float"/>
+</field>
+<field position="3" name="approved" type="CheckBox" id="1092332986">
+<property name="fieldRequired" value="false"/>
+<property name="label" value="quot;enquot;,quot;approved (approved)quot;"/>
+<property name="inputBinding" value=""/>
+<property name="outputBinding" value="approved"/>
+<property name="fieldClass" value="java.lang.Boolean"/>
+</field>
+<dataHolder inputId="" name="#A7E690" type="basicType" outId="approvalRequired" value="java.lang.Boolean" id="approvalRequired"/>
+<dataHolder name="#B29FE4" type="basicType" outId="approved" value="java.lang.Boolean" id="approved"/>
+<dataHolder inputId="" name="#0000A0" type="basicType" outId="customerName" value="java.lang.String" id="customerName"/>
+<dataHolder inputId="" name="#FF54A7" type="basicType" outId="disputeAmount" value="java.lang.Float" id="disputeAmount"/>
+</form>
