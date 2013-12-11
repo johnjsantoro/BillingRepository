@@ -3,5 +3,10 @@ package com.sof.billing.disputesproject;
 rule "IsApprovalRequired"
 	dialect "mvel"
 	when
+		DisputeInfoObject( )
+		( DisputeInfoObject( disputeAmount > 500 ) )
 	then
+		DisputeInfoObject fact0 = new DisputeInfoObject();
+		fact0.setApprovalRequired( true );
+		insert( fact0 );
 end
