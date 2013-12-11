@@ -12,6 +12,10 @@ static final long serialVersionUID = 1L;
     @org.kie.api.definition.type.Position(value = 2)
     private java.lang.Boolean approvalRequired;
     
+    @org.kie.api.definition.type.Label(value = "ApprovedStatus")
+    @org.kie.api.definition.type.Position(value = 3)
+    private java.lang.Boolean approvedStatus;
+    
     @org.kie.api.definition.type.Label(value = "CustomerName")
     @org.kie.api.definition.type.Position(value = 0)
     private java.lang.String customerName;
@@ -23,10 +27,11 @@ static final long serialVersionUID = 1L;
     public DisputeInfoObject() {
     }
 
-    public DisputeInfoObject(java.lang.String customerName, java.lang.Float disputeAmount, java.lang.Boolean approvalRequired) {
+    public DisputeInfoObject(java.lang.String customerName, java.lang.Float disputeAmount, java.lang.Boolean approvalRequired, java.lang.Boolean approvedStatus) {
         this.customerName = customerName;
         this.disputeAmount = disputeAmount;
         this.approvalRequired = approvalRequired;
+        this.approvedStatus = approvedStatus;
     }
 
 
@@ -37,6 +42,14 @@ static final long serialVersionUID = 1L;
 
     public void setApprovalRequired(  java.lang.Boolean approvalRequired ) {
         this.approvalRequired = approvalRequired;
+    }
+    
+    public java.lang.Boolean getApprovedStatus() {
+        return this.approvedStatus;
+    }
+
+    public void setApprovedStatus(  java.lang.Boolean approvedStatus ) {
+        this.approvedStatus = approvedStatus;
     }
     
     public java.lang.String getCustomerName() {
