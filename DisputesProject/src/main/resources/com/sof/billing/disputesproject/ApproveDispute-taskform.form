@@ -1,0 +1,31 @@
+
+<form id="1637365081">
+<property name="subject" value=""/>
+<property name="name" value="ApproveDispute-taskform.form"/>
+<property name="displayMode" value="default"/>
+<property name="status" value="0"/>
+<field position="2" name="disputeAmount" type="InputTextFloat" id="42178810">
+<property name="fieldRequired" value="false"/>
+<property name="label" value="quot;enquot;,quot;amountIn (disputeAmount)quot;"/>
+<property name="inputBinding" value="amountIn"/>
+<property name="outputBinding" value=""/>
+<property name="fieldClass" value="java.lang.Float"/>
+</field>
+<field position="0" name="approved" type="CheckBox" id="1993836866">
+<property name="fieldRequired" value="false"/>
+<property name="label" value="quot;enquot;,quot;approvedOut (approved)quot;"/>
+<property name="inputBinding" value=""/>
+<property name="outputBinding" value="approvedOut"/>
+<property name="fieldClass" value="java.lang.Boolean"/>
+</field>
+<field position="1" name="customerName" type="InputText" id="2022146122">
+<property name="fieldRequired" value="false"/>
+<property name="label" value="quot;enquot;,quot;nameIn (customerName)quot;"/>
+<property name="inputBinding" value="nameIn"/>
+<property name="outputBinding" value=""/>
+<property name="fieldClass" value="java.lang.String"/>
+</field>
+<dataHolder name="#B29FE4" type="basicType" outId="approvedOut" value="java.lang.Boolean" id="approved"/>
+<dataHolder inputId="nameIn" name="#0000A0" type="basicType" value="java.lang.String" id="customerName"/>
+<dataHolder inputId="amountIn" name="#FF54A7" type="basicType" value="java.lang.Float" id="disputeAmount"/>
+</form>
