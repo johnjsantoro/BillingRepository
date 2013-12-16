@@ -4,7 +4,7 @@ package com.sof.billing.disputesproject;
 rule "ApprovalRequired" ruleflow-group "SOFBillingRFG"
 
 when
-	DisputeInfoObject(disputeAmount > 500)
+	$dispute : DisputeInfoObject(disputeAmount > 500)
 then
-
+	$dispute.setApprovalRequired(true);
 end
