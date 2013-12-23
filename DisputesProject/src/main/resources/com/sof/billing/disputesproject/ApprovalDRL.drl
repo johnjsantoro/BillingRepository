@@ -6,5 +6,7 @@ rule "ApprovalRequired" ruleflow-group "SOFBillingRFG"
 when
 	$dispute : DisputeInfoObject(disputeAmount > 500)
 then
+	System.out.println("Triggered approval rule");
 	$dispute.setApprovalRequired(true);
+
 end
