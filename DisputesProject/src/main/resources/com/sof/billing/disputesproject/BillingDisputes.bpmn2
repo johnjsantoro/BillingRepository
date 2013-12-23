@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<bpmn2:definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.omg.org/bpmn20" xmlns:bpmn2="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:bpsim="http://www.bpsim.org/schemas/1.0" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:drools="http://www.jboss.org/drools" id="_ix500Gv3EeOOWNqVQhBupg" xsi:schemaLocation="http://www.omg.org/spec/BPMN/20100524/MODEL BPMN20.xsd http://www.jboss.org/drools drools.xsd http://www.bpsim.org/schemas/1.0 bpsim.xsd" expressionLanguage="http://www.mvel.org/2.0" targetNamespace="http://www.omg.org/bpmn20" typeLanguage="http://www.java.com/javaTypes">
+<bpmn2:definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:bpmn2="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmn20="http://www.omg.org/bpmn20" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:bpsim="http://www.bpsim.org/schemas/1.0" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:drools="http://www.jboss.org/drools" xmlns="http://www.jboss.org/drools" xsi:schemaLocation="http://www.omg.org/spec/BPMN/20100524/MODEL BPMN20.xsd http://www.jboss.org/drools drools.xsd http://www.bpsim.org/schemas/1.0 bpsim.xsd" id="_ix500Gv3EeOOWNqVQhBupg" expressionLanguage="http://www.mvel.org/2.0" targetNamespace="http://www.omg.org/bpmn20" typeLanguage="http://www.java.com/javaTypes">
   <bpmn2:itemDefinition id="_customerNameItem" structureRef="String"/>
   <bpmn2:itemDefinition id="_disputeAmountItem" structureRef="Float"/>
   <bpmn2:itemDefinition id="_approvalRequiredItem" structureRef="Boolean"/>
@@ -16,7 +16,7 @@
   <bpmn2:itemDefinition id="__D4715D90-E654-43FB-A743-5EF867D5891B_approvedOutOutputItem" structureRef="Boolean"/>
   <bpmn2:itemDefinition id="__91AC3162-1F06-4864-8DF6-C83DE7B7C8F3_disputeInputItem" structureRef="com.sof.billing.disputesproject.DisputeInfoObject"/>
   <bpmn2:itemDefinition id="__91AC3162-1F06-4864-8DF6-C83DE7B7C8F3_disputeOutputItem" structureRef="com.sof.billing.disputesproject.DisputeInfoObject"/>
-  <bpmn2:process id="DisputesProject.BillingDisputes" drools:packageName="org.jbpm" drools:version="1.0" name="BillingDisputes" isExecutable="true">
+  <bpmn2:process id="DisputesProject.BillingDisputes" drools:version="1.4" drools:packageName="org.jbpm" drools:adHoc="false" name="BillingDisputes" isExecutable="true">
     <bpmn2:property id="customerName" itemSubjectRef="_customerNameItem"/>
     <bpmn2:property id="disputeAmount" itemSubjectRef="_disputeAmountItem"/>
     <bpmn2:property id="approvalRequired" itemSubjectRef="_approvalRequiredItem"/>
@@ -26,6 +26,14 @@
       <bpmn2:outgoing>_D82DC3ED-B0EA-4497-B007-50219D2269F2</bpmn2:outgoing>
     </bpmn2:startEvent>
     <bpmn2:userTask id="_5D2934E0-C659-4738-87F6-C59CDB4A3255" drools:selectable="true" drools:scriptFormat="http://www.java.com/java" name="Create Dispute">
+      <bpmn2:extensionElements>
+        <drools:onEntry-script scriptFormat="http://www.java.com/java">
+          <drools:script></drools:script>
+        </drools:onEntry-script>
+        <drools:onExit-script scriptFormat="http://www.java.com/java">
+          <drools:script></drools:script>
+        </drools:onExit-script>
+      </bpmn2:extensionElements>
       <bpmn2:incoming>_D82DC3ED-B0EA-4497-B007-50219D2269F2</bpmn2:incoming>
       <bpmn2:outgoing>_630DF850-D11D-4E26-8A5B-4D0FE293B673</bpmn2:outgoing>
       <bpmn2:ioSpecification id="_ix500Wv3EeOOWNqVQhBupg">
@@ -77,8 +85,16 @@
         <bpmn2:targetRef>customerName</bpmn2:targetRef>
       </bpmn2:dataOutputAssociation>
     </bpmn2:userTask>
-    <bpmn2:sequenceFlow id="_D82DC3ED-B0EA-4497-B007-50219D2269F2" drools:bgcolor="#000000" drools:selectable="true" sourceRef="processStartEvent" targetRef="_5D2934E0-C659-4738-87F6-C59CDB4A3255"/>
+    <bpmn2:sequenceFlow id="_D82DC3ED-B0EA-4497-B007-50219D2269F2" drools:priority="1" drools:bgcolor="#000000" drools:selectable="true" sourceRef="processStartEvent" targetRef="_5D2934E0-C659-4738-87F6-C59CDB4A3255"/>
     <bpmn2:userTask id="_D4715D90-E654-43FB-A743-5EF867D5891B" drools:selectable="true" drools:scriptFormat="http://www.java.com/java" name="Approve Dispute">
+      <bpmn2:extensionElements>
+        <drools:onEntry-script scriptFormat="http://www.java.com/java">
+          <drools:script></drools:script>
+        </drools:onEntry-script>
+        <drools:onExit-script scriptFormat="http://www.java.com/java">
+          <drools:script></drools:script>
+        </drools:onExit-script>
+      </bpmn2:extensionElements>
       <bpmn2:incoming>_39AFC2E0-95D0-4921-AE19-ED3553C9711D</bpmn2:incoming>
       <bpmn2:outgoing>_CA7B0297-C52C-4F47-A893-B8163B4D1DA7</bpmn2:outgoing>
       <bpmn2:ioSpecification id="_ix6b7Gv3EeOOWNqVQhBupg">
@@ -129,38 +145,38 @@
       <bpmn2:outgoing>_39AFC2E0-95D0-4921-AE19-ED3553C9711D</bpmn2:outgoing>
       <bpmn2:outgoing>_7930CFB6-9703-4D7D-AA4E-B649C31A70BB</bpmn2:outgoing>
     </bpmn2:exclusiveGateway>
-    <bpmn2:sequenceFlow id="_39AFC2E0-95D0-4921-AE19-ED3553C9711D" drools:bgcolor="#000000" drools:selectable="true" name="Approval required" sourceRef="_139109D5-6A22-423F-92E6-353817113786" targetRef="_D4715D90-E654-43FB-A743-5EF867D5891B">
+    <bpmn2:sequenceFlow id="_39AFC2E0-95D0-4921-AE19-ED3553C9711D" drools:priority="1" drools:bgcolor="#000000" drools:selectable="true" name="Approval required" sourceRef="_139109D5-6A22-423F-92E6-353817113786" targetRef="_D4715D90-E654-43FB-A743-5EF867D5891B">
       <bpmn2:conditionExpression xsi:type="bpmn2:tFormalExpression" id="_ix6b-mv3EeOOWNqVQhBupg" language="http://www.java.com/java"><![CDATA[return(approvalRequired == true);]]></bpmn2:conditionExpression>
     </bpmn2:sequenceFlow>
-    <bpmn2:endEvent id="_D3FDE2AE-A028-40F5-8BC9-F5A623F932F4" drools:bgcolor="#ff6347" drools:selectable="true" name="">
-      <bpmn2:incoming>_7930CFB6-9703-4D7D-AA4E-B649C31A70BB</bpmn2:incoming>
-      <bpmn2:terminateEventDefinition id="_ix6b-2v3EeOOWNqVQhBupg"/>
-    </bpmn2:endEvent>
-    <bpmn2:endEvent id="_36A1B048-1EDB-431D-BCF3-7F67D2FA8836" drools:bgcolor="#ff6347" drools:selectable="true" name="">
-      <bpmn2:incoming>_CA7B0297-C52C-4F47-A893-B8163B4D1DA7</bpmn2:incoming>
-      <bpmn2:terminateEventDefinition id="_ix6b_Gv3EeOOWNqVQhBupg"/>
-    </bpmn2:endEvent>
-    <bpmn2:sequenceFlow id="_7930CFB6-9703-4D7D-AA4E-B649C31A70BB" drools:bgcolor="#000000" drools:selectable="true" name="Approval NOT required" sourceRef="_139109D5-6A22-423F-92E6-353817113786" targetRef="_D3FDE2AE-A028-40F5-8BC9-F5A623F932F4">
+    <bpmn2:sequenceFlow id="_7930CFB6-9703-4D7D-AA4E-B649C31A70BB" drools:priority="1" drools:bgcolor="#000000" drools:selectable="true" name="Approval NOT required" sourceRef="_139109D5-6A22-423F-92E6-353817113786" targetRef="_D3FDE2AE-A028-40F5-8BC9-F5A623F932F4">
       <bpmn2:conditionExpression xsi:type="bpmn2:tFormalExpression" id="_ix6b_Wv3EeOOWNqVQhBupg" language="http://www.java.com/java"><![CDATA[return(approvalRequired == false);]]></bpmn2:conditionExpression>
     </bpmn2:sequenceFlow>
-    <bpmn2:sequenceFlow id="_CA7B0297-C52C-4F47-A893-B8163B4D1DA7" drools:bgcolor="#000000" drools:selectable="true" sourceRef="_D4715D90-E654-43FB-A743-5EF867D5891B" targetRef="_36A1B048-1EDB-431D-BCF3-7F67D2FA8836"/>
+    <bpmn2:sequenceFlow id="_CA7B0297-C52C-4F47-A893-B8163B4D1DA7" drools:priority="1" drools:bgcolor="#000000" drools:selectable="true" sourceRef="_D4715D90-E654-43FB-A743-5EF867D5891B" targetRef="_36A1B048-1EDB-431D-BCF3-7F67D2FA8836"/>
     <bpmn2:scriptTask id="_B3885C10-A7CC-48D4-A1D3-C5DD29B24E9D" drools:selectable="true" name="Map to DisputeInfo" scriptFormat="http://www.java.com/java">
       <bpmn2:incoming>_630DF850-D11D-4E26-8A5B-4D0FE293B673</bpmn2:incoming>
       <bpmn2:outgoing>_11380F1F-118E-47BF-882D-9237FB9D3E34</bpmn2:outgoing>
-      <bpmn2:script><![CDATA[System.out.println("name=" + customerName);
-System.out.println("amount=" + disputeAmount);
-System.out.println("disputeInfo=" + disputeInfo);
+      <bpmn2:script>System.out.println(&quot;name=&quot; + customerName);
+System.out.println(&quot;amount=&quot; + disputeAmount);
+System.out.println(&quot;disputeInfo=&quot; + disputeInfo);
 
 disputeInfo = new com.sof.billing.disputesproject.DisputeInfoObject();
 
 disputeInfo.setCustomerName(customerName);
 disputeInfo.setDisputeAmount(disputeAmount);
 
-System.out.println("DisputeInfo.customerName=" + disputeInfo.getCustomerName());
-]]></bpmn2:script>
+System.out.println(&quot;DisputeInfo.customerName=&quot; + disputeInfo.getCustomerName());
+</bpmn2:script>
     </bpmn2:scriptTask>
-    <bpmn2:sequenceFlow id="_630DF850-D11D-4E26-8A5B-4D0FE293B673" drools:bgcolor="#000000" drools:selectable="true" sourceRef="_5D2934E0-C659-4738-87F6-C59CDB4A3255" targetRef="_B3885C10-A7CC-48D4-A1D3-C5DD29B24E9D"/>
-    <bpmn2:businessRuleTask id="_91AC3162-1F06-4864-8DF6-C83DE7B7C8F3" drools:selectable="true" drools:ruleFlowGroup="SOFBillingRFGfoo" drools:scriptFormat="http://www.java.com/java" name="Approval Rule">
+    <bpmn2:sequenceFlow id="_630DF850-D11D-4E26-8A5B-4D0FE293B673" drools:priority="1" drools:bgcolor="#000000" drools:selectable="true" sourceRef="_5D2934E0-C659-4738-87F6-C59CDB4A3255" targetRef="_B3885C10-A7CC-48D4-A1D3-C5DD29B24E9D"/>
+    <bpmn2:businessRuleTask id="_91AC3162-1F06-4864-8DF6-C83DE7B7C8F3" drools:ruleFlowGroup="SOFBillingRFG" drools:selectable="true" drools:scriptFormat="http://www.java.com/java" name="Approval Rule">
+      <bpmn2:extensionElements>
+        <drools:onEntry-script scriptFormat="http://www.java.com/java">
+          <drools:script></drools:script>
+        </drools:onEntry-script>
+        <drools:onExit-script scriptFormat="http://www.java.com/java">
+          <drools:script></drools:script>
+        </drools:onExit-script>
+      </bpmn2:extensionElements>
       <bpmn2:incoming>_11380F1F-118E-47BF-882D-9237FB9D3E34</bpmn2:incoming>
       <bpmn2:outgoing>_8F775006-53C1-4A34-BC56-F07803D3F2BD</bpmn2:outgoing>
       <bpmn2:ioSpecification id="_ix6b_mv3EeOOWNqVQhBupg">
@@ -182,8 +198,16 @@ System.out.println("DisputeInfo.customerName=" + disputeInfo.getCustomerName());
         <bpmn2:targetRef>disputeInfo</bpmn2:targetRef>
       </bpmn2:dataOutputAssociation>
     </bpmn2:businessRuleTask>
-    <bpmn2:sequenceFlow id="_11380F1F-118E-47BF-882D-9237FB9D3E34" drools:bgcolor="#000000" drools:selectable="true" sourceRef="_B3885C10-A7CC-48D4-A1D3-C5DD29B24E9D" targetRef="_91AC3162-1F06-4864-8DF6-C83DE7B7C8F3"/>
-    <bpmn2:sequenceFlow id="_8F775006-53C1-4A34-BC56-F07803D3F2BD" drools:bgcolor="#000000" drools:selectable="true" sourceRef="_91AC3162-1F06-4864-8DF6-C83DE7B7C8F3" targetRef="_139109D5-6A22-423F-92E6-353817113786"/>
+    <bpmn2:sequenceFlow id="_11380F1F-118E-47BF-882D-9237FB9D3E34" drools:priority="1" drools:bgcolor="#000000" drools:selectable="true" sourceRef="_B3885C10-A7CC-48D4-A1D3-C5DD29B24E9D" targetRef="_91AC3162-1F06-4864-8DF6-C83DE7B7C8F3"/>
+    <bpmn2:sequenceFlow id="_8F775006-53C1-4A34-BC56-F07803D3F2BD" drools:priority="1" drools:bgcolor="#000000" drools:selectable="true" sourceRef="_91AC3162-1F06-4864-8DF6-C83DE7B7C8F3" targetRef="_139109D5-6A22-423F-92E6-353817113786"/>
+    <bpmn2:endEvent id="_36A1B048-1EDB-431D-BCF3-7F67D2FA8836" drools:bgcolor="#ff6347" drools:selectable="true" name="End with Approval">
+      <bpmn2:incoming>_CA7B0297-C52C-4F47-A893-B8163B4D1DA7</bpmn2:incoming>
+      <bpmn2:terminateEventDefinition id="_ix6b_Gv3EeOOWNqVQhBupg"/>
+    </bpmn2:endEvent>
+    <bpmn2:endEvent id="_D3FDE2AE-A028-40F5-8BC9-F5A623F932F4" drools:bgcolor="#ff6347" drools:selectable="true" name="End without Approval">
+      <bpmn2:incoming>_7930CFB6-9703-4D7D-AA4E-B649C31A70BB</bpmn2:incoming>
+      <bpmn2:terminateEventDefinition id="_ix6b-2v3EeOOWNqVQhBupg"/>
+    </bpmn2:endEvent>
   </bpmn2:process>
   <bpmndi:BPMNDiagram id="_ix7C8Wv3EeOOWNqVQhBupg">
     <bpmndi:BPMNPlane id="_ix7C8mv3EeOOWNqVQhBupg" bpmnElement="DisputesProject.BillingDisputes">
@@ -200,7 +224,7 @@ System.out.println("DisputeInfo.customerName=" + disputeInfo.getCustomerName());
       <bpmndi:BPMNShape id="_ix7C9mv3EeOOWNqVQhBupg" bpmnElement="_D4715D90-E654-43FB-A743-5EF867D5891B">
         <dc:Bounds height="80.0" width="100.0" x="720.0" y="315.0"/>
       </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="_ix7C92v3EeOOWNqVQhBupg" bpmnElement="_139109D5-6A22-423F-92E6-353817113786">
+      <bpmndi:BPMNShape id="_ix7C92v3EeOOWNqVQhBupg" bpmnElement="_139109D5-6A22-423F-92E6-353817113786" isMarkerVisible="true">
         <dc:Bounds height="40.0" width="40.0" x="660.0" y="110.0"/>
       </bpmndi:BPMNShape>
       <bpmndi:BPMNEdge id="_ix7C-Gv3EeOOWNqVQhBupg" bpmnElement="_39AFC2E0-95D0-4921-AE19-ED3553C9711D">
@@ -209,19 +233,19 @@ System.out.println("DisputeInfo.customerName=" + disputeInfo.getCustomerName());
         <di:waypoint xsi:type="dc:Point" x="770.0" y="355.0"/>
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNShape id="_ix7C-Wv3EeOOWNqVQhBupg" bpmnElement="_D3FDE2AE-A028-40F5-8BC9-F5A623F932F4">
-        <dc:Bounds height="28.0" width="28.0" x="831.0" y="3.0"/>
+        <dc:Bounds height="28.0" width="28.0" x="848.0" y="0.0"/>
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="_ix7C-mv3EeOOWNqVQhBupg" bpmnElement="_36A1B048-1EDB-431D-BCF3-7F67D2FA8836">
-        <dc:Bounds height="28.0" width="28.0" x="833.0" y="309.0"/>
+        <dc:Bounds height="28.0" width="28.0" x="848.0" y="328.0"/>
       </bpmndi:BPMNShape>
       <bpmndi:BPMNEdge id="_ix7C-2v3EeOOWNqVQhBupg" bpmnElement="_7930CFB6-9703-4D7D-AA4E-B649C31A70BB">
-        <di:waypoint xsi:type="dc:Point" x="680.0" y="130.0"/>
+        <di:waypoint xsi:type="dc:Point" x="680.0" y="110.0"/>
         <di:waypoint xsi:type="dc:Point" x="680.0" y="51.0"/>
-        <di:waypoint xsi:type="dc:Point" x="845.0" y="17.0"/>
+        <di:waypoint xsi:type="dc:Point" x="848.0" y="14.0"/>
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="_ix7C_Gv3EeOOWNqVQhBupg" bpmnElement="_CA7B0297-C52C-4F47-A893-B8163B4D1DA7">
-        <di:waypoint xsi:type="dc:Point" x="770.0" y="355.0"/>
-        <di:waypoint xsi:type="dc:Point" x="847.0" y="323.0"/>
+        <di:waypoint xsi:type="dc:Point" x="820.0" y="355.0"/>
+        <di:waypoint xsi:type="dc:Point" x="848.0" y="342.0"/>
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNShape id="_ix7C_Wv3EeOOWNqVQhBupg" bpmnElement="_B3885C10-A7CC-48D4-A1D3-C5DD29B24E9D">
         <dc:Bounds height="80.0" width="100.0" x="330.0" y="90.0"/>
@@ -243,149 +267,4 @@ System.out.println("DisputeInfo.customerName=" + disputeInfo.getCustomerName());
       </bpmndi:BPMNEdge>
     </bpmndi:BPMNPlane>
   </bpmndi:BPMNDiagram>
-  <bpmn2:relationship id="_ix7DAmv3EeOOWNqVQhBupg" type="BPSimData">
-    <bpmn2:extensionElements>
-      <bpsim:BPSimData>
-        <bpsim:Scenario xsi:type="bpsim:Scenario" id="default" name="Simulationscenario">
-          <bpsim:ScenarioParameters xsi:type="bpsim:ScenarioParameters" baseTimeUnit="min"/>
-          <bpsim:ElementParameters xsi:type="bpsim:ElementParameters" elementRef="_D82DC3ED-B0EA-4497-B007-50219D2269F2" id="_ix7DA2v3EeOOWNqVQhBupg">
-            <bpsim:ControlParameters xsi:type="bpsim:ControlParameters">
-              <bpsim:Probability xsi:type="bpsim:Parameter">
-                <bpsim:FloatingParameter value="100.0"/>
-              </bpsim:Probability>
-            </bpsim:ControlParameters>
-          </bpsim:ElementParameters>
-          <bpsim:ElementParameters xsi:type="bpsim:ElementParameters" elementRef="_D3FDE2AE-A028-40F5-8BC9-F5A623F932F4" id="_ix7DBGv3EeOOWNqVQhBupg">
-            <bpsim:TimeParameters xsi:type="bpsim:TimeParameters">
-              <bpsim:ProcessingTime xsi:type="bpsim:Parameter">
-                <bpsim:UniformDistribution max="10.0" min="5.0"/>
-              </bpsim:ProcessingTime>
-            </bpsim:TimeParameters>
-          </bpsim:ElementParameters>
-          <bpsim:ElementParameters xsi:type="bpsim:ElementParameters" elementRef="_5D2934E0-C659-4738-87F6-C59CDB4A3255" id="_ix7DBWv3EeOOWNqVQhBupg">
-            <bpsim:TimeParameters xsi:type="bpsim:TimeParameters">
-              <bpsim:ProcessingTime xsi:type="bpsim:Parameter">
-                <bpsim:UniformDistribution max="10.0" min="5.0"/>
-              </bpsim:ProcessingTime>
-            </bpsim:TimeParameters>
-            <bpsim:ResourceParameters xsi:type="bpsim:ResourceParameters">
-              <bpsim:Availability xsi:type="bpsim:Parameter">
-                <bpsim:FloatingParameter value="8.0"/>
-              </bpsim:Availability>
-              <bpsim:Quantity xsi:type="bpsim:Parameter">
-                <bpsim:FloatingParameter value="1.0"/>
-              </bpsim:Quantity>
-            </bpsim:ResourceParameters>
-            <bpsim:CostParameters xsi:type="bpsim:CostParameters">
-              <bpsim:UnitCost xsi:type="bpsim:Parameter">
-                <bpsim:FloatingParameter value="0.0"/>
-              </bpsim:UnitCost>
-            </bpsim:CostParameters>
-          </bpsim:ElementParameters>
-          <bpsim:ElementParameters xsi:type="bpsim:ElementParameters" elementRef="_39AFC2E0-95D0-4921-AE19-ED3553C9711D" id="_ix7DBmv3EeOOWNqVQhBupg">
-            <bpsim:ControlParameters xsi:type="bpsim:ControlParameters">
-              <bpsim:Probability xsi:type="bpsim:Parameter">
-                <bpsim:FloatingParameter value="100.0"/>
-              </bpsim:Probability>
-            </bpsim:ControlParameters>
-          </bpsim:ElementParameters>
-          <bpsim:ElementParameters xsi:type="bpsim:ElementParameters" elementRef="_8F775006-53C1-4A34-BC56-F07803D3F2BD" id="_ix7DB2v3EeOOWNqVQhBupg">
-            <bpsim:ControlParameters xsi:type="bpsim:ControlParameters">
-              <bpsim:Probability xsi:type="bpsim:Parameter">
-                <bpsim:FloatingParameter value="100.0"/>
-              </bpsim:Probability>
-            </bpsim:ControlParameters>
-          </bpsim:ElementParameters>
-          <bpsim:ElementParameters xsi:type="bpsim:ElementParameters" elementRef="_36A1B048-1EDB-431D-BCF3-7F67D2FA8836" id="_ix7DCGv3EeOOWNqVQhBupg">
-            <bpsim:TimeParameters xsi:type="bpsim:TimeParameters">
-              <bpsim:ProcessingTime xsi:type="bpsim:Parameter">
-                <bpsim:UniformDistribution max="10.0" min="5.0"/>
-              </bpsim:ProcessingTime>
-            </bpsim:TimeParameters>
-          </bpsim:ElementParameters>
-          <bpsim:ElementParameters xsi:type="bpsim:ElementParameters" elementRef="_D4715D90-E654-43FB-A743-5EF867D5891B" id="_ix7DCWv3EeOOWNqVQhBupg">
-            <bpsim:TimeParameters xsi:type="bpsim:TimeParameters">
-              <bpsim:ProcessingTime xsi:type="bpsim:Parameter">
-                <bpsim:UniformDistribution max="10.0" min="5.0"/>
-              </bpsim:ProcessingTime>
-            </bpsim:TimeParameters>
-            <bpsim:ResourceParameters xsi:type="bpsim:ResourceParameters">
-              <bpsim:Availability xsi:type="bpsim:Parameter">
-                <bpsim:FloatingParameter value="8.0"/>
-              </bpsim:Availability>
-              <bpsim:Quantity xsi:type="bpsim:Parameter">
-                <bpsim:FloatingParameter value="1.0"/>
-              </bpsim:Quantity>
-            </bpsim:ResourceParameters>
-            <bpsim:CostParameters xsi:type="bpsim:CostParameters">
-              <bpsim:UnitCost xsi:type="bpsim:Parameter">
-                <bpsim:FloatingParameter value="0.0"/>
-              </bpsim:UnitCost>
-            </bpsim:CostParameters>
-          </bpsim:ElementParameters>
-          <bpsim:ElementParameters xsi:type="bpsim:ElementParameters" elementRef="_CA7B0297-C52C-4F47-A893-B8163B4D1DA7" id="_ix7DCmv3EeOOWNqVQhBupg">
-            <bpsim:ControlParameters xsi:type="bpsim:ControlParameters">
-              <bpsim:Probability xsi:type="bpsim:Parameter">
-                <bpsim:FloatingParameter value="100.0"/>
-              </bpsim:Probability>
-            </bpsim:ControlParameters>
-          </bpsim:ElementParameters>
-          <bpsim:ElementParameters xsi:type="bpsim:ElementParameters" elementRef="processStartEvent" id="_ix7DC2v3EeOOWNqVQhBupg">
-            <bpsim:TimeParameters xsi:type="bpsim:TimeParameters">
-              <bpsim:ProcessingTime xsi:type="bpsim:Parameter">
-                <bpsim:UniformDistribution max="10.0" min="5.0"/>
-              </bpsim:ProcessingTime>
-            </bpsim:TimeParameters>
-          </bpsim:ElementParameters>
-          <bpsim:ElementParameters xsi:type="bpsim:ElementParameters" elementRef="_630DF850-D11D-4E26-8A5B-4D0FE293B673" id="_ix7DDGv3EeOOWNqVQhBupg">
-            <bpsim:ControlParameters xsi:type="bpsim:ControlParameters">
-              <bpsim:Probability xsi:type="bpsim:Parameter">
-                <bpsim:FloatingParameter value="100.0"/>
-              </bpsim:Probability>
-            </bpsim:ControlParameters>
-          </bpsim:ElementParameters>
-          <bpsim:ElementParameters xsi:type="bpsim:ElementParameters" elementRef="_7930CFB6-9703-4D7D-AA4E-B649C31A70BB" id="_ix7DDWv3EeOOWNqVQhBupg">
-            <bpsim:ControlParameters xsi:type="bpsim:ControlParameters">
-              <bpsim:Probability xsi:type="bpsim:Parameter">
-                <bpsim:FloatingParameter value="100.0"/>
-              </bpsim:Probability>
-            </bpsim:ControlParameters>
-          </bpsim:ElementParameters>
-          <bpsim:ElementParameters xsi:type="bpsim:ElementParameters" elementRef="_B3885C10-A7CC-48D4-A1D3-C5DD29B24E9D" id="_ix7DDmv3EeOOWNqVQhBupg">
-            <bpsim:TimeParameters xsi:type="bpsim:TimeParameters">
-              <bpsim:ProcessingTime xsi:type="bpsim:Parameter">
-                <bpsim:UniformDistribution max="10.0" min="5.0"/>
-              </bpsim:ProcessingTime>
-            </bpsim:TimeParameters>
-            <bpsim:CostParameters xsi:type="bpsim:CostParameters">
-              <bpsim:UnitCost xsi:type="bpsim:Parameter">
-                <bpsim:FloatingParameter value="0.0"/>
-              </bpsim:UnitCost>
-            </bpsim:CostParameters>
-          </bpsim:ElementParameters>
-          <bpsim:ElementParameters xsi:type="bpsim:ElementParameters" elementRef="_91AC3162-1F06-4864-8DF6-C83DE7B7C8F3" id="_ix7DD2v3EeOOWNqVQhBupg">
-            <bpsim:TimeParameters xsi:type="bpsim:TimeParameters">
-              <bpsim:ProcessingTime xsi:type="bpsim:Parameter">
-                <bpsim:UniformDistribution max="10.0" min="5.0"/>
-              </bpsim:ProcessingTime>
-            </bpsim:TimeParameters>
-            <bpsim:CostParameters xsi:type="bpsim:CostParameters">
-              <bpsim:UnitCost xsi:type="bpsim:Parameter">
-                <bpsim:FloatingParameter value="0.0"/>
-              </bpsim:UnitCost>
-            </bpsim:CostParameters>
-          </bpsim:ElementParameters>
-          <bpsim:ElementParameters xsi:type="bpsim:ElementParameters" elementRef="_11380F1F-118E-47BF-882D-9237FB9D3E34" id="_ix7DEGv3EeOOWNqVQhBupg">
-            <bpsim:ControlParameters xsi:type="bpsim:ControlParameters">
-              <bpsim:Probability xsi:type="bpsim:Parameter">
-                <bpsim:FloatingParameter value="100.0"/>
-              </bpsim:Probability>
-            </bpsim:ControlParameters>
-          </bpsim:ElementParameters>
-        </bpsim:Scenario>
-      </bpsim:BPSimData>
-    </bpmn2:extensionElements>
-    <bpmn2:source>_ix500Gv3EeOOWNqVQhBupg</bpmn2:source>
-    <bpmn2:target>_ix500Gv3EeOOWNqVQhBupg</bpmn2:target>
-  </bpmn2:relationship>
 </bpmn2:definitions>
