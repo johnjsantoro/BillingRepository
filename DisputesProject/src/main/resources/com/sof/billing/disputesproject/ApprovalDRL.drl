@@ -5,7 +5,9 @@ rule "ApprovalRequired" ruleflow-group "SOFBillingRFGf"
 
 when
 	eval (1 == 1)
+	$dispute : DisputeInfoObject
 then
 	System.out.println("Triggered approval rule");
+	System.out.println("Triggered approval rule: amount=" + $dispute.disputeAmount);
 
 end
