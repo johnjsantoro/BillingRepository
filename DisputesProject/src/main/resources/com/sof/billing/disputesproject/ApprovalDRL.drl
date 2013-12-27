@@ -7,7 +7,7 @@ when
 	$dispute : Object()
 
 then
-	System.out.println("Triggered approval rule");
+	System.out.println("Triggered approval rule with object");
 
 
 end
