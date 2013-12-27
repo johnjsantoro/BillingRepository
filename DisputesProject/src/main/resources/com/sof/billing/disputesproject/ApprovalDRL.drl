@@ -4,10 +4,10 @@ package com.sof.billing.disputesproject;
 rule "ApprovalRequired" ruleflow-group "SOFBillingRFG"
 
 when
-	DisputeInfoObject()
+	$disputeInfo : DisputeInfoObject()
 
 then
-	System.out.println("Triggered approval rule with object");
+	System.out.println("Triggered approval rule with object=" + $disputeInfo);
 
 
 end
