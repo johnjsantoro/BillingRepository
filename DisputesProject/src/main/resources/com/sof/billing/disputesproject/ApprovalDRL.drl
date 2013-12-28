@@ -7,6 +7,7 @@ when
 	$disputeInfo : DisputeInfoObject( disputeAmount > 400)
 
 then
-	System.out.println("Triggered approval rule with object=" + $disputeInfo);
+	$disputeInfo.setApprovalRequired(true);
+	System.out.println("Triggered approval rule with object=" + $disputeInfo.getApprovalRequired());
 
 end
