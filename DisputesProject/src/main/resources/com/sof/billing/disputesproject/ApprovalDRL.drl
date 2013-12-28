@@ -8,6 +8,6 @@ when
 
 then
 //	$disputeInfo.setApprovalRequired(true);
-	System.out.println("Triggered approval rule with object=" + $disputeInfo.getDisputeAmount());
+	System.out.println("Triggered approval rule with amount=" + $disputeInfo.getDisputeAmount() + " approval=" + $disputeInfo.getApprovalRequired());
 
 end
