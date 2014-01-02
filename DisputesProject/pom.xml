@@ -4,7 +4,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.sof.billing</groupId>
   <artifactId>DisputesProject</artifactId>
-  <version>1.4</version>
+  <version>1.5</version>
   <name>DisputesProject</name>
   <description>another attempt to create the billing disputes process</description>
   <repositories>
