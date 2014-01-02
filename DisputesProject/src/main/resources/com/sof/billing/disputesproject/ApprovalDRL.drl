@@ -1,13 +1,15 @@
 package com.sof.billing.disputesproject;
 
-
 rule "ApprovalRequired" ruleflow-group "SOFBillingRFG"
+no-loop
 
 when
 	$disputeInfo : DisputeInfoObject( disputeAmount > 500)
 
 then
-	$disputeInfo.setApprovalRequired(true);
+	modify($disputeInfo)  {
+		setApprovalRequired(true);
+	}
 	System.out.println("Triggered approval rule with amount=" + $disputeInfo.getDisputeAmount() + " approval=" + $disputeInfo.getApprovalRequired());
 
 end
