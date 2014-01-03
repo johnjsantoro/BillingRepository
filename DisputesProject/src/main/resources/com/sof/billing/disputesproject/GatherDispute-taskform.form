@@ -1,0 +1,29 @@
+
+<form id="65301996">
+<property name="subject" value=""/>
+<property name="name" value="GatherDispute-taskform.form"/>
+<property name="displayMode" value="default"/>
+<property name="status" value="0"/>
+<field position="1" name="disputeInfo_approvedStatus" type="CheckBox" id="61280101">
+<property name="fieldRequired" value="false"/>
+<property name="label" value="quot;enquot;,quot;approvedStatus (disputeInfo)quot;"/>
+<property name="inputBinding" value="disputeInput/approvedStatus"/>
+<property name="outputBinding" value="disputeOutput/approvedStatus"/>
+<property name="fieldClass" value="java.lang.Boolean"/>
+</field>
+<field position="0" name="disputeInfo_approvalRequired" type="CheckBox" id="1209095327">
+<property name="fieldRequired" value="false"/>
+<property name="label" value="quot;enquot;,quot;approvalRequired (disputeInfo)quot;"/>
+<property name="inputBinding" value="disputeInput/approvalRequired"/>
+<property name="outputBinding" value="disputeOutput/approvalRequired"/>
+<property name="fieldClass" value="java.lang.Boolean"/>
+</field>
+<field position="2" name="disputeInfo_customerName" type="InputText" id="877693003">
+<property name="fieldRequired" value="false"/>
+<property name="label" value="quot;enquot;,quot;customerName (disputeInfo)quot;"/>
+<property name="inputBinding" value="disputeInput/customerName"/>
+<property name="outputBinding" value="disputeOutput/customerName"/>
+<property name="fieldClass" value="java.lang.String"/>
+</field>
+<dataHolder inputId="disputeInput" name="#0000A0" type="dataModelerEntry" outId="disputeOutput" value="com.sof.billing.disputesproject.DisputeInfo" id="disputeInfo"/>
+</form>
