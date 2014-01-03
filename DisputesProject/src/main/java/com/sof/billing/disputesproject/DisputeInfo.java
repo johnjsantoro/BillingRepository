@@ -9,27 +9,22 @@ public class DisputeInfo  implements java.io.Serializable {
 static final long serialVersionUID = 1L;
     
     @org.kie.api.definition.type.Label(value = "ApprovalRequired")
-    @org.kie.api.definition.type.Position(value = 2)
+    @org.kie.api.definition.type.Position(value = 1)
     private java.lang.Boolean approvalRequired;
     
     @org.kie.api.definition.type.Label(value = "ApprovedStatus")
-    @org.kie.api.definition.type.Position(value = 3)
+    @org.kie.api.definition.type.Position(value = 2)
     private java.lang.Boolean approvedStatus;
     
     @org.kie.api.definition.type.Label(value = "CustomerName")
     @org.kie.api.definition.type.Position(value = 0)
     private java.lang.String customerName;
-    
-    @org.kie.api.definition.type.Label(value = "DisputeAmount")
-    @org.kie.api.definition.type.Position(value = 1)
-    private java.lang.Float disputeAmount;
 
     public DisputeInfo() {
     }
 
-    public DisputeInfo(java.lang.String customerName, java.lang.Float disputeAmount, java.lang.Boolean approvalRequired, java.lang.Boolean approvedStatus) {
+    public DisputeInfo(java.lang.String customerName, java.lang.Boolean approvalRequired, java.lang.Boolean approvedStatus) {
         this.customerName = customerName;
-        this.disputeAmount = disputeAmount;
         this.approvalRequired = approvalRequired;
         this.approvedStatus = approvedStatus;
     }
@@ -58,13 +53,5 @@ static final long serialVersionUID = 1L;
 
     public void setCustomerName(  java.lang.String customerName ) {
         this.customerName = customerName;
-    }
-    
-    public java.lang.Float getDisputeAmount() {
-        return this.disputeAmount;
-    }
-
-    public void setDisputeAmount(  java.lang.Float disputeAmount ) {
-        this.disputeAmount = disputeAmount;
     }
 }
