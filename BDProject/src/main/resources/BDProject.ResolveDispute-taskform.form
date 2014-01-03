@@ -1,0 +1,36 @@
+
+<form id="1689682356">
+<property name="subject" value=""/>
+<property name="name" value="BDProject.ResolveDispute-taskform.form"/>
+<property name="displayMode" value="default"/>
+<property name="status" value="0"/>
+<field position="0" name="disputeInfo_approvalRequired" type="CheckBox" id="1576129894">
+<property name="fieldRequired" value="false"/>
+<property name="label" value="quot;enquot;,quot;approvalRequired (disputeInfo)quot;"/>
+<property name="inputBinding" value=""/>
+<property name="outputBinding" value="disputeInfo/approvalRequired"/>
+<property name="fieldClass" value="java.lang.Boolean"/>
+</field>
+<field position="2" name="disputeInfo_customerName" type="InputText" id="924565961">
+<property name="fieldRequired" value="false"/>
+<property name="label" value="quot;enquot;,quot;customerName (disputeInfo)quot;"/>
+<property name="inputBinding" value=""/>
+<property name="outputBinding" value="disputeInfo/customerName"/>
+<property name="fieldClass" value="java.lang.String"/>
+</field>
+<field position="1" name="disputeInfo_approvalStatus" type="CheckBox" id="1767090365">
+<property name="fieldRequired" value="false"/>
+<property name="label" value="quot;enquot;,quot;approvalStatus (disputeInfo)quot;"/>
+<property name="inputBinding" value=""/>
+<property name="outputBinding" value="disputeInfo/approvalStatus"/>
+<property name="fieldClass" value="java.lang.Boolean"/>
+</field>
+<field position="3" name="disputeInfo_disputeAmount" type="InputTextInteger" id="711397001">
+<property name="fieldRequired" value="false"/>
+<property name="label" value="quot;enquot;,quot;disputeAmount (disputeInfo)quot;"/>
+<property name="inputBinding" value=""/>
+<property name="outputBinding" value="disputeInfo/disputeAmount"/>
+<property name="fieldClass" value="java.lang.Integer"/>
+</field>
+<dataHolder name="#0000A0" type="dataModelerEntry" outId="disputeInfo" value="com.sof.bdproject.DisputeInfo" id="disputeInfo"/>
+</form>
