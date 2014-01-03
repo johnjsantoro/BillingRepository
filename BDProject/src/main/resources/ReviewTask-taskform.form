@@ -1,0 +1,36 @@
+
+<form id="1481163165">
+<property name="subject" value=""/>
+<property name="name" value="ReviewTask-taskform.form"/>
+<property name="displayMode" value="default"/>
+<property name="status" value="0"/>
+<field position="1" name="disputeInfo_approvalStatus" type="CheckBox" id="1284851695">
+<property name="fieldRequired" value="false"/>
+<property name="label" value="quot;enquot;,quot;approvalStatus (disputeInfo)quot;"/>
+<property name="inputBinding" value="_dispute/approvalStatus"/>
+<property name="outputBinding" value="dispute_/approvalStatus"/>
+<property name="fieldClass" value="java.lang.Boolean"/>
+</field>
+<field position="3" name="disputeInfo_disputeAmount" type="InputTextFloat" id="289245458">
+<property name="fieldRequired" value="false"/>
+<property name="label" value="quot;enquot;,quot;disputeAmount (disputeInfo)quot;"/>
+<property name="inputBinding" value="_dispute/disputeAmount"/>
+<property name="outputBinding" value="dispute_/disputeAmount"/>
+<property name="fieldClass" value="java.lang.Float"/>
+</field>
+<field position="0" name="disputeInfo_approvalRequired" type="CheckBox" id="7516974">
+<property name="fieldRequired" value="false"/>
+<property name="label" value="quot;enquot;,quot;approvalRequired (disputeInfo)quot;"/>
+<property name="inputBinding" value="_dispute/approvalRequired"/>
+<property name="outputBinding" value="dispute_/approvalRequired"/>
+<property name="fieldClass" value="java.lang.Boolean"/>
+</field>
+<field position="2" name="disputeInfo_customerName" type="InputText" id="410314955">
+<property name="fieldRequired" value="false"/>
+<property name="label" value="quot;enquot;,quot;customerName (disputeInfo)quot;"/>
+<property name="inputBinding" value="_dispute/customerName"/>
+<property name="outputBinding" value="dispute_/customerName"/>
+<property name="fieldClass" value="java.lang.String"/>
+</field>
+<dataHolder inputId="_dispute" name="#0000A0" type="dataModelerEntry" outId="dispute_" value="com.sof.bdproject.DisputeInfo" id="disputeInfo"/>
+</form>
