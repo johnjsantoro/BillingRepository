@@ -1,0 +1,27 @@
+import com.sof.bdproject.DisputeInfo;
+
+rule "approval required" ruleflow-group "approvalrulegroup"
+no-loop
+
+when
+	$disputeInfo : DisputeInfo ( disputeAmount >= 500)
+
+then
+	modify($disputeInfo) {
+		setApprovalRequired(true);
+	}
+
+end
+
+rule "approval NOT required" ruleflow-group "approvalrulegroup"
+no-loop
+
+when
+	$disputeInfo : DisputeInfo ( disputeAmount < 500)
+
+then
+	modify($disputeInfo) {
+		setApprovalRequired(false);
+	}
+
+end
