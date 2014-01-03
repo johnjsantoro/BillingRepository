@@ -18,12 +18,12 @@ static final long serialVersionUID = 1L;
     private java.lang.String customerName;
     
     @org.kie.api.definition.type.Position(value = 1)
-    private java.lang.Integer disputeAmount;
+    private java.lang.Float disputeAmount;
 
     public DisputeInfo() {
     }
 
-    public DisputeInfo(java.lang.String customerName, java.lang.Integer disputeAmount, java.lang.Boolean approvalRequired, java.lang.Boolean approvalStatus) {
+    public DisputeInfo(java.lang.String customerName, java.lang.Float disputeAmount, java.lang.Boolean approvalRequired, java.lang.Boolean approvalStatus) {
         this.customerName = customerName;
         this.disputeAmount = disputeAmount;
         this.approvalRequired = approvalRequired;
@@ -56,11 +56,11 @@ static final long serialVersionUID = 1L;
         this.customerName = customerName;
     }
     
-    public java.lang.Integer getDisputeAmount() {
+    public java.lang.Float getDisputeAmount() {
         return this.disputeAmount;
     }
 
-    public void setDisputeAmount(  java.lang.Integer disputeAmount ) {
+    public void setDisputeAmount(  java.lang.Float disputeAmount ) {
         this.disputeAmount = disputeAmount;
     }
 }
