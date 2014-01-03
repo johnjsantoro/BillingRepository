@@ -4,7 +4,7 @@ rule "ApprovalRequired" ruleflow-group "SOFBillingRFG"
 no-loop
 
 when
-	$disputeInfo : DisputeInfo( approvalStatus == true)
+	$disputeInfo : DisputeInfo( approvedStatus == true)
 
 then
 	modify($disputeInfo)  {
